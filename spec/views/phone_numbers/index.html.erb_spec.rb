@@ -5,11 +5,11 @@ RSpec.describe "phone_numbers/index", type: :view do
     assign(:phone_numbers, [
       PhoneNumber.create!(
         :number => "Number",
-        :person_id => 2
+        :contact_id => 2
       ),
       PhoneNumber.create!(
         :number => "Number",
-        :person_id => 2
+        :contact_id => 2
       )
     ])
   end

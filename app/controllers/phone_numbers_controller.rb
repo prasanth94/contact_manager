@@ -14,7 +14,9 @@
 
   # GET /phone_numbers/new
   def new
-    @phone_number = PhoneNumber.new(person_id: params[:person_id])
+     @phone_number = PhoneNumber.new(contact_id: params[:contact_id], contact_type: params[:contact_type])
+end
+
   end
 
   # GET /phone_numbers/1/edit
@@ -69,7 +71,7 @@
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def phone_number_params
-      params.require(:phone_number).permit(:number, :person_id)
+      params.require(:phone_number).permit(:number, :contact_id, :contact_type)
     end
 
 end
